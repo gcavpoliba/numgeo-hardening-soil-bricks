@@ -1,0 +1,5 @@
+triax_CIU.out
+*TriaxialUEq
+5000 100 1.0
+0.25
+*End

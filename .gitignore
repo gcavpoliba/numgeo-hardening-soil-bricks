@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# GUI work directories (file di output del driver, non versionare)
+gui_work_dir/
+temp_calibration/
+
+# File di output del driver (vengono rigenerati)
+*.out
+!examples/IncrementalDriver/output_CD.out
+!examples/IncrementalDriver/triax.out
+
+# Log
+*.log
+
+# Excel temporaneo generato dalla GUI
+Calibrazione_HS_Bricks_Curve_Dinamiche.xlsx
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Fortran build artifacts
+*.obj
+*.mod
+*.exe
+*.dll
+*.lib
+
+# Ma manteniamo gli .exe precompilati ship-pati negli examples
+!examples/IncrementalDriver/IncrementalDriver.exe
+!examples/Calibration/numgeo-hs-bricks-calibration.exe
+!VisualStudio/**/x64/Release/*.exe

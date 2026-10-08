@@ -7,6 +7,8 @@ circular shallow-foundation boundary-value problem.
 ```
 examples/
 ├── IncrementalDriver/     → IncrementalDriver.exe + input files + pre-computed results
+│   ├── undrained_examples/  → TX-CIU example (*TriaxialUEq)
+│   └── cyclic_undrained/    → cyclic undrained G/G0 example (*CirculatingLoad)
 ├── Calibration/           → numgeo-hs-bricks-calibration.exe + parameters.inp
 └── umat/
     ├── element test/      → triax-hs-bricks.inp + comparison data
@@ -53,6 +55,48 @@ deviatoric stress <em>q</em> and volumetric strain <em>ε<sub>v</sub></em> again
 <em>ε<sub>1</sub></em>.
 </figcaption>
 </figure>
+
+---
+
+## Undrained (TX-CIU) example
+
+`examples/IncrementalDriver/undrained_examples/` contains an isotropically
+consolidated **undrained** triaxial compression test (TX-CIU) using the driver
+keyword `*TriaxialUEq`. The driver enforces `ε_v = 0` (Roscoe path) and
+applies a deviatoric strain `ε_q = 0.25` (25% axial compression in undrained
+conditions).
+
+To run it:
+
+```
+cd examples\IncrementalDriver\undrained_examples
+..\IncrementalDriver.exe
+```
+
+The output `triax_CIU.out` contains 78 columns including the effective stress
+state. The GUI `gui_hs_bricks.py` (TX-CIU checkbox) reads this file
+automatically, computes the excess pore pressure `∆u = (p0 + q/3) - p'`
+assuming constant cell pressure `σ3 = p0'`, and plots:
+
+- `q vs ε_s` (deviatoric response)
+- `q vs p'` and `q vs p_total` (effective and total stress paths)
+- `∆u vs ε_s` (pore pressure response)
+- `p' vs ε_s` (effective mean stress evolution)
+
+See `examples/IncrementalDriver/undrained_examples/README.md` for details.
+
+---
+
+## Cyclic undrained example (G/G0)
+
+`examples/IncrementalDriver/cyclic_undrained/` contains a single-amplitude
+cyclic test using `*CirculatingLoad` with `*Cartesian` (shear strain in the
+`xy` component, amplitude `γ_a = 1e-4`). The GUI's cyclic sweep runs an
+automatic log-spaced series of amplitudes (`1e-6` to `1e-2`) and produces the
+`G/G0 - γ` and `D - γ` curves.
+
+See `examples/IncrementalDriver/cyclic_undrained/README.md` for details.
+
 
 ---
 

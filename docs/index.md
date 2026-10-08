@@ -19,6 +19,7 @@ calibration and Abaqus/UMAT use.
 [Theory](theory.md){ .md-button }
 [Building the code](building.md){ .md-button }
 [Examples](examples.md){ .md-button }
+[GUI reference](gui.md){ .md-button }
 </div>
 
 </div>
