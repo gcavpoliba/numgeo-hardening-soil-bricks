@@ -1,0 +1,8 @@
+ 6        ntens
+ -100.0000     stress(1)
+ -100.0000     stress(2)
+ -100.0000     stress(3)
+  0       stress(4)
+  0       stress(5)
+  0       stress(ntens)
+  73      nstatv    number of state variables

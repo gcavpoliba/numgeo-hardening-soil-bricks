@@ -1,0 +1,18 @@
+    Hardening-Soil-MN-Bricks     cmname
+    16           nprops
+    8.5d3        E50
+	6.15d3       Eoed
+	25.75d3      Eur
+	0.7          m
+	6            c
+	28           phi
+	6            psi
+	0.29         nu
+	100          pref
+	0.8          K0nc
+	0.9          Rf
+	15.46d3      Eiref
+	0.515        alpha     set 0.0 for automatic calibration
+	9.866d3      Hpp       set 0.0 for automatic calibration
+	3d-4         gamma_07
+	60d3         G0
