@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="50%" stop-color="#0066CC"/>
+      <stop offset="100%" stop-color="#004080"/>
+    </linearGradient>
+    <linearGradient id="brickGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9F0A"/>
+      <stop offset="100%" stop-color="#D2691E"/>
+    </linearGradient>
+    <linearGradient id="brickGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#30D158"/>
+      <stop offset="100%" stop-color="#1B8A38"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Apple rounded squircle app icon -->
+  <rect width="512" height="512" rx="114" fill="url(#bgGrad)"/>
+  
+  <!-- Grid lines representing finite element / constitutive space -->
+  <path d="M60 380 L452 380" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-dasharray="6,6"/>
+  <path d="M60 280 L452 280" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-dasharray="6,6"/>
+  <path d="M60 180 L452 180" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-dasharray="6,6"/>
+  
+  <!-- Constitutive Curve (Hyperbolic & Yield Surface) -->
+  <path d="M90 380 Q 180 180, 430 140" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" filter="url(#shadow)"/>
+  
+  <!-- Bricks (Multi-surface representation) -->
+  <g filter="url(#shadow)">
+    <!-- Bottom layer bricks -->
+    <rect x="110" y="320" width="70" height="34" rx="6" fill="url(#brickGrad1)"/>
+    <rect x="190" y="320" width="70" height="34" rx="6" fill="url(#brickGrad1)"/>
+    <rect x="270" y="320" width="70" height="34" rx="6" fill="url(#brickGrad1)"/>
+    <rect x="350" y="320" width="60" height="34" rx="6" fill="url(#brickGrad1)"/>
+    
+    <!-- Mid layer bricks -->
+    <rect x="150" y="274" width="70" height="34" rx="6" fill="url(#brickGrad2)"/>
+    <rect x="230" y="274" width="70" height="34" rx="6" fill="url(#brickGrad2)"/>
+    <rect x="310" y="274" width="70" height="34" rx="6" fill="url(#brickGrad2)"/>
+    
+    <!-- Top cap brick -->
+    <rect x="190" y="228" width="70" height="34" rx="6" fill="#64D2FF"/>
+    <rect x="270" y="228" width="70" height="34" rx="6" fill="#BF5AF2"/>
+  </g>
+  
+  <!-- Text Label -->
+  <text x="256" y="445" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">HS-BRICKS</text>
+  <text x="256" y="475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="20" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle" letter-spacing="1">GEOTECH LAB iOS</text>
+</svg>
