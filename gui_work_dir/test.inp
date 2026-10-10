@@ -1,5 +1,11 @@
-triax_CIU.out
-*TriaxialUEq
-2500 100 1.0
-0.050000
+cycle_12.out
+*CirculatingLoad
+250 100 1.0
+*Cartesian
+1 0.0 0.0 0.0
+1 0.0 0.0 0.0
+1 0.0 0.0 0.0
+0 1.00000000e-02 0.0 0.0
+0 0.0 0.0 0.0
+0 0.0 0.0 0.0
 *End
